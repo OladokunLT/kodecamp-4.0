@@ -1,4 +1,4 @@
-/**
+/** 
     1. Create a file named “removeDuplicate.js” and inside that file 
     create a function named “remove duplicate”. 
     The function should accept an ordered array with duplicate elements 
@@ -11,24 +11,24 @@ function removeDuplicate(arr) {
 
   // checking: user input must be an Array
   if (Array.isArray(arr) === false)
-    return (ErrorMessage = `Invlid input, ${arr}; You did not enter an Array of duplicate value`);
+    return (ErrorMessage = `Oops! Not Array. Expect an Array of sorted duplicate elements`);
 
   // checking: Array should not be empty
   if (arr.length == 0)
-    return (ErrorMessage = `An empty array; You did not enter an Array of duplicate value `);
+    return (ErrorMessage = `Oops! Empty array. Expect an Array of sorted duplicate elements`);
 
   // checking: arr should contain duplicate value
   let duplicated = arr.filter((e) => arr.indexOf(e) != arr.lastIndexOf(e));
   if (duplicated.length == 0) {
     return (ErrorMessage =
-      "Ooops! No duplicate value found; Please enter array with duplicate values ");
+      "Oops! duplicate element not found. Expect Array of sorted duplicate elements");
   }
 
   // checking: Array should be sorted
   for (let i = 0; i < arr.length; i++) {
     while (arr[i + 1] < arr[i]) {
       return (ErrorMessage =
-        "Not a sorted array, Expect Array with sorted items");
+        "Not sorted, Expect Array of sorted duplicate elements");
     }
   }
 
@@ -44,10 +44,10 @@ function removeDuplicate(arr) {
 }
 console.log(removeDuplicate("11233"));
 
-console.log(removeDuplicate([1]));
+console.log(removeDuplicate([]));
 
 console.log(removeDuplicate([1, 2, 3, 4, 5]));
 
-console.log(removeDuplicate([1, 10, 2, 2]));
+console.log(removeDuplicate([1, 10, 3, 2, 2]));
 
 console.log(removeDuplicate([1, 2, 2, 3, 3, 3, 4, 5, 5]));
