@@ -1,0 +1,16 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Getting familiar with expressJs",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lukman Oladokun",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "uuid": "^10.0.0"
+  }
+}

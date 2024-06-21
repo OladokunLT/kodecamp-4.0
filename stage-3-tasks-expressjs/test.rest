@@ -1,0 +1,46 @@
+POST http://localhost:3000/task 
+Content-Type: application/json
+
+{
+    
+    "title": "Javascript basic",
+    "desc": "A function that format number",
+    "status": "Submitted"
+}
+
+###
+
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/task/0002 
+
+
+###
+PUT http://localhost:3000/task/0001
+Content-Type: application/json
+
+{
+    "id": "0001",
+    "title": "Application acceptance",
+    "desc": "Acceptance letter received",
+    "status": "Submitted"
+}
+
+###
+
+PATCH http://localhost:3000/task/0001
+Content-Type: application/json
+
+{
+    "id": "0001",
+    "title": "Application acceptance",
+    "desc": "Acceptance letter received",
+    "status": "Not Submit"
+}
+
+###
+
+DELETE http://localhost:3000/task/0002
+Content-Type: application/json
