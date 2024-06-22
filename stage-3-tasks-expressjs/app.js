@@ -44,7 +44,7 @@ app.get("/", function (req, res) {
 app.get("/task/:id", (req, res) => {
   const TaskId = req.params.id;
   currentTask = tasks.find((task) => task.id === TaskId);
-  res.send(`${currentTask}`);
+  res.send(currentTask);
 });
 
 // Modify title and decs of single task by ID
@@ -93,3 +93,5 @@ app.listen(3000, function () {
 
 //   res.send("The result is " + result);
 // });
+
+// https://web.postman.co/workspace/My-Workspace~1f2dba67-6577-4b3c-8fbc-2b3ab2d308a7/request/26824850-b1d2f28f-fdda-4ab5-a9ed-26634e25ede9
