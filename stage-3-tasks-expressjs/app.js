@@ -1,10 +1,18 @@
 const express = require("express");
 const uid = require("uuid");
 const app = express();
+const logger = require("morgan");
+
+// app.use(function (req, res, next) {
+//   console.log(req.url, req.hostname, req.protocol, req.method);
+//   next();
+// });
 
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
+
+app.use(logger("combined"));
 
 let tasks = [
   {
@@ -77,6 +85,12 @@ app.delete("/task/:id", (req, res) => {
   const taskId = req.params.id;
   tasks = tasks.filter((task) => task.id != taskId);
   res.send("Task deleted successfully");
+});
+
+app.post("/login", (req, res) => {
+  console.log("request body: ", req.body);
+  console.log("Content-Type: ", req.headers["content-type"]);
+  res.json({ isSuccessful: true, message: "logged in succesful" });
 });
 
 // Listen on port 3000
