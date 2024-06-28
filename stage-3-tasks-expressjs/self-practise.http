@@ -1,0 +1,39 @@
+GET http://127.0.0.1:3000
+
+###
+
+POST http://127.0.0.1:3000/signup
+Content-Type: application/json
+
+{
+    "firstName": "Lukman Tayo",
+    "lastName": "Oladokun",
+    "email": "victor.oladokun@gmail.com",
+    "password": "vic123"
+}
+
+###
+
+GET http://127.0.0.1:3000/login/victor.oladokun@gmail.com/vic12
+
+###
+
+PUT http://127.0.0.1:3000/person/1ef34cf5-77ae-6080-be78-d9e4e9d0d191
+Content-Type: application/json
+
+{
+    "firstName": "Habe"
+}
+
+###
+
+PATCH http://127.0.0.1:3000/person/1ef34d1d-634f-69e0-9133-600a3b6a84c7
+Content-Type: application/json
+
+{
+    "lastName": "Ha"
+}
+
+###
+
+DELETE http://127.0.0.1:3000/person/1ef353f3-d9a0-6310-9b62-a46b3e4bc1a9

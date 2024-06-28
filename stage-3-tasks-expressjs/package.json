@@ -4,6 +4,7 @@
   "description": "Getting familiar with expressJs",
   "main": "app.js",
   "scripts": {
+    "start": "node self-practise.js",
     "dev": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
