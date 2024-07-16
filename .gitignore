@@ -1,6 +1,7 @@
 *node_modules
 
-.env
+*env
 
 stage-3-tasks-expressjs/self-practise.js
 stage-3-tasks-expressjs/self-practise.http
+
